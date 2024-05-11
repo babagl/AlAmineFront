@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { map, Observable } from 'rxjs';
-import { Boutique } from '../../model/boutique.model';
+import { Boutique } from '../../model/Boutique.model';
 import { BoutiquesService } from '../../services/boutiques/boutiques.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { BoutiquesService } from '../../services/boutiques/boutiques.service';
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
-    imports: [HttpClientModule, CommonModule, RouterLink]
+    imports: [HttpClientModule, CommonModule, RouterLink],
 })
 export class HomeComponent implements OnInit{
   boutique$! : Observable<Boutique[]>;
