@@ -99,7 +99,11 @@
                               />
                           </div>
                       </div>
-
+                      @if (errorMessage) {
+                        <div class="text-red-500 text-sm mt-2">
+                            {{ errorMessage }}
+                        </div>
+                          }
                       <div>
                           <button
                               [disabled]="!loginForm.valid"
